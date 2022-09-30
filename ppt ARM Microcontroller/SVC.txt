@@ -1,0 +1,112 @@
+SUBROUTINES in Cortex M
+
+
+BL Subroutine1
+---
+---
+----
+
+
+Subroutine1
+	--
+	---
+	PUSH {LR}
+	BL Subroutine2
+	POP {LR}
+	--
+	--
+
+	MOV PC,LR    ;RET
+
+
+
+
+Subroutine2
+--
+--
+---
+MOV PC,LR
+
+SVC EXCEPTION HANDLING 
+
+SVC --- Supervisor call instruction
+
+SVC 0X00 ---
+SVC 0X01
+SVC 0X02
+SVC 0X03
+--
+--
+--
+
+SVC 0XFF
+
+EACH OF them is an SVC exception means they trigger an exception which is also called as software interrpt......
+
+Whenever an interrupt or exception occurs LR will not store the address of the next instruction like in subroutines instead
+it stores exception return value....
+LR -- stores a special value conatining the details of the previous link..
+
+SVC is USUALLY used by OS/RTOS for implementing system calls...
+
+System calls are OS routines to carry-out systems related operations basically to implement a privileged operation...
+
+
+1001
+
+
+0100 === 4
+
+16 BIT OR 32 bit ----------> THumb2 ISA --------
+
+0x00
+0x02
+0x04
+0x06
+0x08
+0x0c -- 32
+0x10 --32
+
+
+PRIMASK  = 1; // DISABLE ALL INTERRUPTS but not excpetions...
+
+PRIMASK = 0 ; // RE-ENABLE THE disabled interrupts...
+
+MOV R0,#1
+MSR PRIMASK,R0
+
+--
+---
+---
+MOV R0,#0
+MSR PRIMASK,R0
+
+---- diaable interrupts as well as exceptions --------------
+
+MOV R0,#1
+MSR FAULTMASK,R0
+
+--
+---
+---
+MOV R0,#0
+MSR FAULTMASK,R0
+
+
+ALL interrpts and exceptions they ahve programmble priority...... 8 bit .......
+
+
+
+BASEPRI = 0X4 ; WILL DIABLE ALL interrupts and exceptions whose prioriti is 4 and above......
+
+BASEPRI = 0;
+
+
+
+
+
+
+
+
+
+

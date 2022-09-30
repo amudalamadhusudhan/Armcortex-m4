@@ -1,0 +1,156 @@
+MIcroprocessor ---  Processor (CPU core --- ALU + registers) + Control Logic(Memory +IO) --- MCU
+
+1. Processing of Instructions 
+2. Access memory - RAM and ROM
+3. I/o processing
+
+Size of CPU/processor ---  64 bit (core i7/i5/i3), 32 bit(i386), 16 bit (8086), 8 bit (8085)
+
+--What is the Size CPU??
+-- Data bus size/registers/ALU --- granualarity of data size.. 
+
+Data Memory -- RAM --- bus used for interfacing data memory is called data bus --- 8 bit
+
+FLOPS :-  Floating point operations per seconds...  --- CPU which have FPU
+
+MIPS :-- Millions of instructions per seconds..
+
+10 MIPS -- 10 Mhz Clock freq. --- 10 power 6
+
+MCU :-- processor + peripherals 
+
+Peripherals:--
+1. CPU (Core) peripherls:-- RAM, ROM, clock unit, Bus Unit, Interrupt controller, PMU
+
+2. Peripherals :- GPIOs, Timers, ADC, SPI, I2C, UART, CAN, DAC, DMA,  
+
+SoC :-- System on Chip (RF + CPU + Peripherals)
+
+eg;--  ARM, AVR, Microtek, Qualcomm Snapdragon 
+
+
+Embedded Computing :--  MCU/SoC
+MCU :-- Small Embedded devices (Sensors Unit, IoT end devices)
+SoC :- Large Embedded Devices (Mobile phones)
+
+Memory Interfacing :-- Address buses and data buses...
+
+RAM :- Data Memory--- User defined data... Volatile memory --- stack memory
+
+DRAM:- Dynamic RAM --- Capacitors --- Frequent recharging --- Size is large... (in Gb)
+
+SRAM :- Static RAM --- Flip flops --- no need of recharging ----Size is small.. (in Kb)
+
+
+
+ROM :-- Read only memory (FLASH :-- Read and write capabilities) -- program memory ---- Non Volatile memory....
+--- flash program...
+
+A0 --- A15 ----------- 64 k bytes of memory --- 8 bit CPU
+A0 --- A31 ----------- 4 GB bytes of memory -- 32 bit CPU
+
+D0 --  D7 ------------- 8 bit data bus.... 8 bit CPU -- 8085,8051,AVR,
+
+D0 --  D15 ------------- 16 bit data bus.... 16 bit CPU -- 8086
+
+D0 --  D31 ------------- 32 bit data bus.... 32 bit CPU -- ARM
+
+Von Newmann Architecture -- one set of buses for accessing RAM and ROM
+A0 --- A15 ----------- 64 k bytes of memory --- 8 bit CPU
+D0 --  D7 ------------- 8 bit data bus.... 8 bit CPU --
+8085,8086...
+
+Hardward Architecture -- two set of buses for accessing RAM and ROM respectively
+ARM,DSP
+
+ROM:
+A0 --- A15 ----------- 64 k bytes of memory --- 8 bit CPU  
+D0 --  D7 ------------- 8 bit instruction bus.... 8 bit CPU --
+
+RAM:
+A0 --- A15 ----------- 64 k bytes of memory --- 8 bit CPU  
+D0 --  D7 ------------- 8 bit data bus.... 8 bit CPU --
+
+
+Pipileined excution 
+
+Throughput :--  1 MIPS per 1 Mhz...
+
+single clock cycles execution....
+
+RISC :- Reduced instruction set computer --less instrcions typically 100-200
+
+CISC :-- Complex instruction set computer --- large instructions typically 1000 instyructions..
+
+
+ADD A,#40  --- IMMEDIATE addressing...   A = A + 40
+
+
+ADD A, R0 ---  REGSITER addressing ----  A = A + R0
+
+
+ADD A,40H ---- DIRECT ADDRESSING   ----- A = A + [40H] -- Memory access + data processing  -- CISC
+
+MOV R2,#40H
+LDR R1,[R2]
+ADD R3,R1 ------  R3 = R3 + R1 ------- risc ARM 
+
+
+
+ADD A,@R0  ---- INDIRECT addressing ----------- A = A + [R0] -- Memory access + data processing  -- CISC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
