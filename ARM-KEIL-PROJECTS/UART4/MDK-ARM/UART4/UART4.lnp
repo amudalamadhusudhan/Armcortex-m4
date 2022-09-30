@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp
+"uart4\startup_stm32f407xx.o"
+"uart4\main.o"
+"uart4\stm32f4xx_it.o"
+"uart4\stm32f4xx_hal_msp.o"
+"uart4\stm32f4xx_hal_tim.o"
+"uart4\stm32f4xx_hal_tim_ex.o"
+"uart4\stm32f4xx_hal_uart.o"
+"uart4\stm32f4xx_hal_rcc.o"
+"uart4\stm32f4xx_hal_rcc_ex.o"
+"uart4\stm32f4xx_hal_flash.o"
+"uart4\stm32f4xx_hal_flash_ex.o"
+"uart4\stm32f4xx_hal_flash_ramfunc.o"
+"uart4\stm32f4xx_hal_gpio.o"
+"uart4\stm32f4xx_hal_dma_ex.o"
+"uart4\stm32f4xx_hal_dma.o"
+"uart4\stm32f4xx_hal_pwr.o"
+"uart4\stm32f4xx_hal_pwr_ex.o"
+"uart4\stm32f4xx_hal_cortex.o"
+"uart4\stm32f4xx_hal.o"
+"uart4\stm32f4xx_hal_exti.o"
+"uart4\system_stm32f4xx.o"
+--strict --scatter "UART4\UART4.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "UART4.map" -o UART4\UART4.axf

@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp.sp
+"spp\startup_stm32f407xx.o"
+"spp\main.o"
+"spp\stm32f4xx_it.o"
+"spp\stm32f4xx_hal_msp.o"
+"spp\stm32f4xx_hal_timebase_tim.o"
+"spp\stm32f4xx_hal_spi.o"
+"spp\stm32f4xx_hal_rcc.o"
+"spp\stm32f4xx_hal_rcc_ex.o"
+"spp\stm32f4xx_hal_flash.o"
+"spp\stm32f4xx_hal_flash_ex.o"
+"spp\stm32f4xx_hal_flash_ramfunc.o"
+"spp\stm32f4xx_hal_gpio.o"
+"spp\stm32f4xx_hal_dma_ex.o"
+"spp\stm32f4xx_hal_dma.o"
+"spp\stm32f4xx_hal_pwr.o"
+"spp\stm32f4xx_hal_pwr_ex.o"
+"spp\stm32f4xx_hal_cortex.o"
+"spp\stm32f4xx_hal.o"
+"spp\stm32f4xx_hal_exti.o"
+"spp\stm32f4xx_hal_tim.o"
+"spp\stm32f4xx_hal_tim_ex.o"
+"spp\stm32f4xx_hal_uart.o"
+"spp\system_stm32f4xx.o"
+--strict --scatter "spp\spp.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "spp.map" -o spp\spp.axf

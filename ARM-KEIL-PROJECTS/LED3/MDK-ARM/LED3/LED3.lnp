@@ -1,0 +1,25 @@
+--cpu=Cortex-M4.fp.sp
+"led3\startup_stm32f407xx.o"
+"led3\main.o"
+"led3\stm32f4xx_it.o"
+"led3\stm32f4xx_hal_msp.o"
+"led3\stm32f4xx_hal_tim.o"
+"led3\stm32f4xx_hal_tim_ex.o"
+"led3\stm32f4xx_hal_rcc.o"
+"led3\stm32f4xx_hal_rcc_ex.o"
+"led3\stm32f4xx_hal_flash.o"
+"led3\stm32f4xx_hal_flash_ex.o"
+"led3\stm32f4xx_hal_flash_ramfunc.o"
+"led3\stm32f4xx_hal_gpio.o"
+"led3\stm32f4xx_hal_dma_ex.o"
+"led3\stm32f4xx_hal_dma.o"
+"led3\stm32f4xx_hal_pwr.o"
+"led3\stm32f4xx_hal_pwr_ex.o"
+"led3\stm32f4xx_hal_cortex.o"
+"led3\stm32f4xx_hal.o"
+"led3\stm32f4xx_hal_exti.o"
+"led3\system_stm32f4xx.o"
+--strict --scatter "LED3\LED3.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "LED3.map" -o LED3\LED3.axf

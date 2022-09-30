@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp.sp
+"accerelometer\startup_stm32f407xx.o"
+"accerelometer\main.o"
+"accerelometer\stm32f4xx_it.o"
+"accerelometer\stm32f4xx_hal_msp.o"
+"accerelometer\stm32f4xx_hal_timebase_tim.o"
+"accerelometer\stm32f4xx_hal_spi.o"
+"accerelometer\stm32f4xx_hal_rcc.o"
+"accerelometer\stm32f4xx_hal_rcc_ex.o"
+"accerelometer\stm32f4xx_hal_flash.o"
+"accerelometer\stm32f4xx_hal_flash_ex.o"
+"accerelometer\stm32f4xx_hal_flash_ramfunc.o"
+"accerelometer\stm32f4xx_hal_gpio.o"
+"accerelometer\stm32f4xx_hal_dma_ex.o"
+"accerelometer\stm32f4xx_hal_dma.o"
+"accerelometer\stm32f4xx_hal_pwr.o"
+"accerelometer\stm32f4xx_hal_pwr_ex.o"
+"accerelometer\stm32f4xx_hal_cortex.o"
+"accerelometer\stm32f4xx_hal.o"
+"accerelometer\stm32f4xx_hal_exti.o"
+"accerelometer\stm32f4xx_hal_tim.o"
+"accerelometer\stm32f4xx_hal_tim_ex.o"
+"accerelometer\stm32f4xx_hal_uart.o"
+"accerelometer\system_stm32f4xx.o"
+--strict --scatter "Accerelometer\Accerelometer.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Accerelometer.map" -o Accerelometer\Accerelometer.axf

@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp
+"uart5\startup_stm32f407xx.o"
+"uart5\main.o"
+"uart5\stm32f4xx_it.o"
+"uart5\stm32f4xx_hal_msp.o"
+"uart5\stm32f4xx_hal_tim.o"
+"uart5\stm32f4xx_hal_tim_ex.o"
+"uart5\stm32f4xx_hal_uart.o"
+"uart5\stm32f4xx_hal_rcc.o"
+"uart5\stm32f4xx_hal_rcc_ex.o"
+"uart5\stm32f4xx_hal_flash.o"
+"uart5\stm32f4xx_hal_flash_ex.o"
+"uart5\stm32f4xx_hal_flash_ramfunc.o"
+"uart5\stm32f4xx_hal_gpio.o"
+"uart5\stm32f4xx_hal_dma_ex.o"
+"uart5\stm32f4xx_hal_dma.o"
+"uart5\stm32f4xx_hal_pwr.o"
+"uart5\stm32f4xx_hal_pwr_ex.o"
+"uart5\stm32f4xx_hal_cortex.o"
+"uart5\stm32f4xx_hal.o"
+"uart5\stm32f4xx_hal_exti.o"
+"uart5\system_stm32f4xx.o"
+--strict --scatter "UART5\UART5.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "UART5.map" -o UART5\UART5.axf

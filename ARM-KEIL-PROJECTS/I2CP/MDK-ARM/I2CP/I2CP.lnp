@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp.sp
+"i2cp\startup_stm32f407xx.o"
+"i2cp\main.o"
+"i2cp\stm32f4xx_it.o"
+"i2cp\stm32f4xx_hal_msp.o"
+"i2cp\stm32f4xx_hal_i2c.o"
+"i2cp\stm32f4xx_hal_i2c_ex.o"
+"i2cp\stm32f4xx_hal_rcc.o"
+"i2cp\stm32f4xx_hal_rcc_ex.o"
+"i2cp\stm32f4xx_hal_flash.o"
+"i2cp\stm32f4xx_hal_flash_ex.o"
+"i2cp\stm32f4xx_hal_flash_ramfunc.o"
+"i2cp\stm32f4xx_hal_gpio.o"
+"i2cp\stm32f4xx_hal_dma_ex.o"
+"i2cp\stm32f4xx_hal_dma.o"
+"i2cp\stm32f4xx_hal_pwr.o"
+"i2cp\stm32f4xx_hal_pwr_ex.o"
+"i2cp\stm32f4xx_hal_cortex.o"
+"i2cp\stm32f4xx_hal.o"
+"i2cp\stm32f4xx_hal_exti.o"
+"i2cp\stm32f4xx_hal_tim.o"
+"i2cp\stm32f4xx_hal_tim_ex.o"
+"i2cp\stm32f4xx_hal_uart.o"
+"i2cp\system_stm32f4xx.o"
+--strict --scatter "I2CP\I2CP.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "I2CP.map" -o I2CP\I2CP.axf
